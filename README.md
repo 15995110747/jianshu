@@ -1,4 +1,4 @@
-# nuxtuse
+# jianshu
 
 > Nuxt.js project
 
