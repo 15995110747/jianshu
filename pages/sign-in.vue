@@ -62,7 +62,7 @@
 export default {
   // 设置页面的标题以及描述，关键字等信息
   // 修改当前页面的默认模板为sign.vue
-  // 如果不写的话，默认是default.icon
+  // 如果不写的话，默认是default.vue
   layout: "sign",
   head: {
     title: "简书-登录",

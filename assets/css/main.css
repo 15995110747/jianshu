@@ -12,7 +12,7 @@ html,body{
     line-height: 1.42857;
     background-color: #fff;
 }
-#__nuxt,#__layout,#sign-template{
+#__nuxt,#__layout,#sign-template,#default-template{
     height: 100%;
 }
 body{
