@@ -32,7 +32,7 @@
                   <span>记住我</span>
                   </div>
                   <nuxt-link class="help" to='/'>登录遇到问题?</nuxt-link>
-                  <button class="btn btn-primary">登录</button>
+                  <button class="sign-in-btn">登录</button>
               </form>
           </div>
           <div class="more-sign">
