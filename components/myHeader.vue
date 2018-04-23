@@ -49,7 +49,7 @@
             </ul>
           </div>
           <div class="container">
-            <transition name="fade">
+            <div class="row">
             <ul class="nav-list">
               <li>
                 <nuxt-link to='/' class="active">
@@ -104,7 +104,7 @@
                 </form>
               </li>  
             </ul>
-            </transition>
+            </div>
             <div class="navbar-header">
             <button type="button" class="navbar-toggle" @click="slideToggle()">
               <i class="fa fa-bars"></i>
@@ -145,6 +145,7 @@ export default {
 nav {
   width: 100%;
   height: 56px;
+  background-color: white;
 }
 .navbar {
   margin-bottom: 20px;

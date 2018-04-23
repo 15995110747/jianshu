@@ -1,0 +1,136 @@
+/* 首页布局 */
+.index .main {
+    padding-top: 30px;
+    padding-right: 0;
+}
+.index .aside{
+    padding-top: 30px;
+}
+.index .main .recommend-collection{
+    margin-bottom: 12px;
+}
+.index .main .recommend-collection a.collection{
+    display: inline-block;
+    margin:  0 18px 18px 0;
+    border:1px solid #dcdcdc;
+    background: #dcdcdc;
+    border-radius: 4px;
+    min-width: 32px;
+    height: 34px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.index .main .recommend-collection a.collection img{
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    vertical-align: middle;
+}
+.index .main .recommend-collection a.collection span{
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 150px;
+}
+.index .main .recommend-collection a.more-collection{
+    display: inline-block;
+    font-size: 14px;
+    color: #787878;
+}
+.index .main .split-line{
+    margin-top: 9px;
+    border-top: 1px solid #f0f0f0;
+    margin-bottom: 15px;
+}
+.note-list li {
+    width: 100%;
+    padding: 0 0 17px;
+    margin: 0 0 17px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+.note-list li .wrap-img{
+    width: 150px;
+    height: 120px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    /* margin-top: 60px; */
+}
+.note-list li .wrap-img img{
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.note-list li.hava-img>div{
+    padding-right: 160px;
+}
+.note-list .author{
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.note-list .author .avatar{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+}
+.avatar img{
+   max-width: 100%;
+   height: auto;
+   display: inline-block;
+   border-radius: 50%;
+   border:1px solid #ddd;
+}
+.note-list .author .info{
+    display: inline-block;
+    vertical-align: middle;
+}
+.note-list .author .time{
+    color: #969696;
+    vertical-align: middle;
+}
+.note-list .author .nickname{
+    vertical-align: middle;
+}
+.note-list .title{
+    margin: -7px 0 4px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+.note-list .title:hover{
+    text-decoration: underline;
+}
+.note-list .abstruct{
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 24px;
+}
+.note-list .meta{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+.note-list .meta .collection-tag{
+    max-width: 200px;
+    display: inline-block;
+    padding: 0 5px;
+    color: #ea6f5a;
+    border: 1px solid #ea6f5a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 5px;
+    vertical-align: middle;
+    border-radius: 3px;
+    transition: all .1s ease-in;
+}
+.note-list .meta .collection-tag:hover{
+    background: rgba(236, 97, 73, .05)
+}
