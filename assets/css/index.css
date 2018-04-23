@@ -132,5 +132,18 @@
     transition: all .1s ease-in;
 }
 .note-list .meta .collection-tag:hover{
-    background: rgba(236, 97, 73, .05)
+    background: rgba(236, 97, 73, .05);
+    color: #ec6149!important;
+    border-color: #ec6149;
+}
+.note-list .meta a {
+    color: #b4b4b4;
+    transition: .1s ease-in;
+    margin-right: 10px;
+}
+.note-list .meta a :hover{
+    color:#787878;
+}
+.note-list .meta span{
+    color: #b4b4b4;
 }
