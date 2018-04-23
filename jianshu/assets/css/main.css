@@ -1,0 +1,83 @@
+/**********************全局清除浏览器默认样式**************************/
+* {
+    box-sizing: border-box;
+}
+html,body {
+    margin:0;
+    padding:0;
+    border:0;
+    height:100%;
+    color:#333;
+    font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+    line-height: 1.42857;
+    background-color: #fff;
+}
+body {
+    overflow-x: hidden;
+}
+#__nuxt {
+    height:100%;
+}
+#__layout {
+    height:100%;
+}
+#sign-template {
+    height:100%;
+}
+#default-template {
+    height:100%;
+}
+ul,ol,dl {
+    list-style: none;
+    padding:0;
+}
+input,input:hover,input:active,input:focus {
+    outline: none;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:17px;
+    margin:0;
+}
+p {
+    margin:0;
+}
+a {
+    text-decoration: none;
+    color:#333;
+}
+a:hover {
+    color:#333;
+    text-decoration: none;
+}
+/*************************************首页样式******************************************/
+.container {
+    padding-left:15px;
+    padding-right:15px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.container:after {
+    content:'';
+    clear:both;
+    display:table;
+}
+@media (min-width:992px) {
+    .container {
+        width:960px;
+    }
+}
+@media (max-width:1080px) {
+    .container {
+        width:750px;
+    }
+}
+
+
+
+
+
