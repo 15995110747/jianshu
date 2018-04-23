@@ -52,13 +52,16 @@ a{
   visibility: hidden;
 
 }
-@media (min-width:996px){
-    .container{
-        width: 960px;
+
+
+@media (min-width: 992px) {
+    .container {
+        width:960px
     }
 }
-@media (min-width:1040px){
-    .container{
-        width: 750px;
+
+@media (min-width: 1080px) {
+    .container {
+        width:960px
     }
 }
