@@ -50,7 +50,7 @@
           </div>
           <div class="container">
             <transition name="fade">
-            <ul class="nav-list" style="height:0">
+            <ul class="nav-list">
               <li>
                 <nuxt-link to='/' class="active">
                   <i class="fa fa-compass"></i>
@@ -249,7 +249,6 @@ nav .user .drop-menu li a i {
 }
 nav .nav-list {
   float: left;
-  overflow: hidden;
 }
 nav .nav-list > li {
   float: left;
@@ -300,6 +299,7 @@ nav .nav-list .search form input {
   border: 1px solid #eee;
   border-radius: 40px;
   width: 240px;
+  transition: all .5s
 }
 nav .nav-list .search form input:focus {
   width: 320px;
@@ -315,6 +315,7 @@ nav .nav-list .search form .search-btn {
   text-align: center;
   padding: 0;
   font-size: 15px;
+  
 }
 nav .nav-list .search form .search-btn i {
   margin: 0;
@@ -381,7 +382,12 @@ nav .navbar-header .navbar-toggle {
     display: block;
   }
 }
+
 @media (max-width: 768px) {
+  nav .nav-list {
+    overflow: hidden;
+    height: 0;
+  }
   nav .nav-list li span {
     display: block;
   }
@@ -418,17 +424,14 @@ nav .navbar-header .navbar-toggle {
   nav .nav-list .drop-menu {
     display: none;
   }
+   nav .nav-list .search form .search-input {
+    width: 160px;
+  }
 }
 @media (min-width: 768px) {
-  nav .navbar-content {
-    display: none;
-  }
-  nav .nav-list {
-    display: block !important;
-  }
   nav .nav-list > li a i {
     display: inline-block;
-  }
+  } 
 }
 </style>
 
