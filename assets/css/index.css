@@ -147,3 +147,92 @@
 .note-list .meta span{
     color: #b4b4b4;
 }
+.index .main .load-more{
+    width: 100%;
+    height: 40px;
+    background: #a5a5a5;
+    color: #fff;
+    text-align: center;
+    margin: 30px auto 60px;
+    border-radius: 20px;
+    font-size: 15px;
+    display: block;
+    padding: 10px 15px;
+}
+.index .main .load-more:hover{
+    background: #999;
+}
+.index .aside .board{
+    padding-bottom: 6px;
+}
+.index .aside .board img{
+    width: 100%;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+.index .aside .recommended-author{
+    margin-bottom: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+.index .aside .recommended-author .title{
+    text-align: left;
+}
+.index .aside .recommended-author .title span{
+    color: #969696;
+}
+.index .aside .recommended-author .title .page-change{
+    color: #969696;
+    float: right;
+}
+.index .aside .recommended-author .title .page-change i{
+    transition: all .5s ease;
+}
+.index .aside .recommended-author .recommended-list{
+    text-align: right;
+    margin-bottom: 10px;
+}
+.index .aside .recommended-author .recommended-list li{
+    margin-top: 15px;
+}
+.index .aside .recommended-author .recommended-list li .avatar{
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+}
+.index .aside .recommended-author .recommended-list li .follow{
+    float: right;
+    font-size: 13px;
+    color: #42c02e;
+    margin-bottom: 20px;
+}
+.index .aside .recommended-author .recommended-list li .following{
+    color: #969696;
+    float: right;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.index .aside .recommended-author .recommended-list li .name{
+    margin-left: 60px;
+    font-size: 14px;
+    display: block;
+    padding-top: 5px;
+    text-align: left;
+}
+.index .aside .recommended-author .recommended-list li p{
+    margin: 2px 0 5px 0;
+    color: #969696;
+    text-align: left;
+    font-size: 12px;
+}
+.index .aside .recommended-author .find-more{
+    width: 100%;
+    padding: 7px 7px 7px 18px;
+    border: 1px solid #dcdcdc;
+    display: block;
+    color: #787878;
+    background: #f7f7f7;
+    text-align: center;
+}

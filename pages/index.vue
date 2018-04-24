@@ -202,35 +202,118 @@
                               </div>
                           </li>
                       </ul>
-                      <a href="#" class="load-more">阅读更多</a>
+                      
                   </div>
+                  <a href="#" class="load-more">阅读更多</a>
               </div>
               <div class="col-xs-offset-1 col-xs-7 aside">
-                  侧边栏
+                  <div class="row">
+                    <div class="board">
+                      <nuxt-link to='/'>
+                            <img src="../assets/image/s1.png" alt="">
+                      </nuxt-link>
+                      <nuxt-link to='/'>
+                            <img src="../assets/image/s2.png" alt="">
+                      </nuxt-link>
+                      <nuxt-link to='/'>
+                            <img src="../assets/image/s3.png" alt="">
+                      </nuxt-link>
+                      <nuxt-link to='/'>
+                            <img src="../assets/image/s4.png" alt="">
+                      </nuxt-link>
+                    </div>
+                    <div class="recommended-author">
+                        <div class="title">
+                            <span>推荐作者</span>
+                            <a to='/' class="page-change" @click="count++">
+                                <i class='fa fa-refresh' :style="{transform:'rotate('+360*count+'deg)'}"></i>
+                                换一批
+                            </a>
+                        </div>
+                        <ul class="recommended-list">
+                            <li v-for="(i,index) in 6" :key='index'>
+                                <nuxt-link to='/u/123' class="avatar">
+                                    <img src="../assets/image/default-avator.jpg" alt="">
+                                </nuxt-link>
+                                <a href="#" :class='[followed?"follow":"following"]' @click="followed=!followed" @mouseenter="follow=!follow" @mouseleave="follow=!follow">
+                                    <i :class='[followed?change[0].icon:follow?change[2].icon:change[1].icon]'></i>
+                                    {{followed?change[0].word:follow?change[2].word:change[1].word}}
+                                </a>
+                                <nuxt-link to='/u/123' class="name">
+                                    简书用户
+                                </nuxt-link>
+                                <p>写了219.4k字 · 1.9k喜欢 </p>
+                            </li>
+                        </ul>
+                        <nuxt-link to='/' class="find-more">
+                            查看更多
+                            <i class="fa fa-angle-right"></i>
+                        </nuxt-link>
+                    </div>
+
+                  </div>
               </div>
           </div>
       </div>
   </div>
 </template>
 <script>
-import myHeader from '../components/myHeader.vue';
+import myHeader from "../components/myHeader.vue";
 export default {
-    head:{
-        title:'简书-创作你的创作',
-        meta:[
-            {charset:'utf-8'},
-            {name:'keywords',content:'简书首页'},
-            {name:'description',content:'简书首页'},
-            {name:'Author',content:'chen'}
-        ]
-    },
+  head: {
+    title: "简书-创作你的创作",
+    meta: [
+      { charset: "utf-8" },
+      { name: "keywords", content: "简书首页" },
+      { name: "description", content: "简书首页" },
+      { name: "Author", content: "chen" }
+    ]
+  },
   data() {
     return {
-      name: "首页"
+      name: "首页",
+      count: 0,
+      followed:true,
+      follow:false,
+      change: [
+           {
+          icon: "fa fa-plus",
+          word: "关注"
+        },
+        {
+          icon: "fa fa-check",
+          word: "已关注",
+        },
+       
+        {
+          icon: "fa fa-times",
+          word: "取消关注"
+        }
+      ]
     };
   },
-  components:{
-      myHeader
+  components: {
+    myHeader
+  },
+  methods: {
+    // like(i) {
+    //     console.log(i)
+    //   if (i.currentTarget.className == "follow") {
+    //     i.currentTarget.innerHTML = '<i class="fa fa-check"></i>已关注';
+    //     i.currentTarget.className = "follow following";
+    //   } else {
+    //     i.currentTarget.innerHTML = '<i class="fa fa-plus"></i> 关注';
+    //     i.currentTarget.className = "follow";
+    //   }
+    // },
+    // del(i) {
+    //   var d = document.querySelector(".index .aside .recommended-author .recommended-list li:nth-of-type(" +i +") .following");
+    //   if (d != null) {d.innerHTML = '<i class="fa fa-times"></i>取消关注';}
+    // },
+    // back(i) {
+    //   var d = document.querySelector(".index .aside .recommended-author .recommended-list li:nth-of-type(" +i +") .following");
+    //   if (d != null) {d.innerHTML = '<i class="fa fa-check"></i>已关注';}
+    // }
   }
 };
 </script>

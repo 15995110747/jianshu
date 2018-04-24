@@ -9,8 +9,8 @@
             <i class="fa fa-edit"></i>
             写文章          
           </nuxt-link>
-          <div class="user" @mouseleave="dropOut(dropShow=false)">
-            <div class="drop-down" @mouseover="dropOver(dropShow=true)">
+          <div class="user" @mouseleave="dropShow=false">
+            <div class="drop-down" @mouseover="dropShow=true">
               <nuxt-link to='/u/123' class="avator">
                 <img src="../assets/image/default-avator.jpg" alt="">
               </nuxt-link>
@@ -63,7 +63,7 @@
                   <span>关注</span>
                 </nuxt-link>
               </li>
-               <li @mouseover="messageShowHandle(messageShow=true)" @mouseleave="messageHideHandle(messageShow=false)" class="user">
+               <li @mouseover="messageShow=true" @mouseleave="messageShow=false" class="user">
                 <nuxt-link to='/'>
                   <i class="fa fa-bell-o"></i>
                   <span>消息</span>
