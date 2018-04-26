@@ -72,28 +72,62 @@
                         </div>
                     </div>
                     <div class="meta-bottom">
-                        <div class="like">
+                        <div :class="[isLiked?'liked like':'like']" @click="isLiked=!isLiked">
                             <div class="like-btn">
                                 <a href="#" class="">喜欢</a>
                             </div>
                             <div class="like-num">
-                                <a href="#">50</a>
+                                <a href="#">{{isLiked?'51':'50'}}</a>
                             </div>
                         </div>
                         <div class="share">
-                            <a class="share-btn" href="#">
+                            <a class="share-btn" href="#" @mouseenter="weixinshow=!weixinshow" @mouseleave='weixinshow=!weixinshow'>
                                 <i class="fa fa-weixin weixin"></i>
                             </a>
-                             <a class="share-btn" href="#">
+                            <div class="tooltip" v-show="weixinshow">
+                                分享到微信
+                            </div>
+                            <div class="tooltip1" v-show="weiboshow">
+                                分享到微博
+                            </div>
+                            <div class="tooltip2" v-show="qqshow">
+                                分享到QQ
+                            </div>
+                             <a class="share-btn" href="#" @mouseenter="weiboshow=!weiboshow" @mouseleave='weiboshow=!weiboshow'>
                                 <i class="fa fa-weibo weibo"></i>
                             </a>
-                             <a class="share-btn" href="#">
+                             <a class="share-btn" href="#" @mouseenter="qqshow=!qqshow" @mouseleave='qqshow=!qqshow'>
                                 <i class="fa fa-qq qq"></i>
                             </a>
-                             <a class="more-share share-btn" href="#">
+                             <a class="more-share share-btn" @click="moreHandle($event)">
                                 更多分享
                             </a>
+                            <div class="popover">
+                                <ul class="share-list" v-show="more">
+                                    <li>
+                                        <i class="fa fa-star" style="color:#eebf13"></i>
+                                        分享到QQ空间
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-twitter" style="color:#00aaec"></i>
+                                        分享到Twitter
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-facebook-official" style="color:#4460a0"></i>
+                                        分享到Facebook
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-google-plus" style="color:#f9402e"></i>
+                                        分享到Google+
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-github" style="color:#3f902d"></i>
+                                        分享到豆瓣
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                        
                     </div>
                     <!-- 留言组件 -->
                     <my-comment></my-comment>
@@ -117,12 +151,27 @@ export default {
   },
   data() {
     return {
-        
+        isLiked:false,
+        weixinshow:false,
+        weiboshow:false,
+        qqshow:false,
+        more:false
     };
   },
   components: {
     myHeader,
     myComment
+  },
+  methods:{
+      moreHandle(e){
+          this.more=true;
+          e.stopPropagation();
+      }
+  },
+  mounted(){
+      document.onclick=function(){
+              this.more=false;
+      }.bind(this);
   }
 };
 </script>
