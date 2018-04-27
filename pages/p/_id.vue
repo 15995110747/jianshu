@@ -81,51 +81,25 @@
                             </div>
                         </div>
                         <div class="share">
-                            <a class="share-btn" href="#" @mouseenter="weixinshow=!weixinshow" @mouseleave='weixinshow=!weixinshow'>
+                            <a class="share-btn" href="#" v-tooltip="'分享到微信'">
                                 <i class="fa fa-weixin weixin"></i>
                             </a>
-                            <div class="tooltip" v-show="weixinshow">
-                                分享到微信
-                            </div>
-                            <div class="tooltip1" v-show="weiboshow">
-                                分享到微博
-                            </div>
-                            <div class="tooltip2" v-show="qqshow">
-                                分享到QQ
-                            </div>
-                             <a class="share-btn" href="#" @mouseenter="weiboshow=!weiboshow" @mouseleave='weiboshow=!weiboshow'>
+                             <a class="share-btn" href="#"  v-tooltip="'分享到微博'">
                                 <i class="fa fa-weibo weibo"></i>
                             </a>
-                             <a class="share-btn" href="#" @mouseenter="qqshow=!qqshow" @mouseleave='qqshow=!qqshow'>
+                             <a class="share-btn" href="#" v-tooltip="'分享到QQ'">
                                 <i class="fa fa-qq qq"></i>
                             </a>
-                             <a class="more-share share-btn" @click="moreHandle($event)">
+                            <a class="more-share share-btn" v-close-popover="false">
+                            <v-popover>
+                               
                                 更多分享
+                            <template slot="popover">
+                                <more-share></more-share>
+                           </template>
+                            
+                            </v-popover>
                             </a>
-                            <div class="popover">
-                                <ul class="share-list" v-show="more">
-                                    <li>
-                                        <i class="fa fa-star" style="color:#eebf13"></i>
-                                        分享到QQ空间
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-twitter" style="color:#00aaec"></i>
-                                        分享到Twitter
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-facebook-official" style="color:#4460a0"></i>
-                                        分享到Facebook
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-google-plus" style="color:#f9402e"></i>
-                                        分享到Google+
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-github" style="color:#3f902d"></i>
-                                        分享到豆瓣
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                         
                     </div>
@@ -139,6 +113,7 @@
 <script>
 import myHeader from "~/components/myHeader";
 import myComment from "~/components/myComment";
+import moreShare from "~/components/moreShare";
 export default {
   name: "page",
   head: {
@@ -151,27 +126,26 @@ export default {
   },
   data() {
     return {
-        isLiked:false,
-        weixinshow:false,
-        weiboshow:false,
-        qqshow:false,
-        more:false
+      isLiked: false,
+      isEnabled: true,
+      more: false
     };
   },
   components: {
     myHeader,
-    myComment
+    myComment,
+    moreShare
   },
-  methods:{
-      moreHandle(e){
-          this.more=true;
-          e.stopPropagation();
-      }
+  methods: {
+    moreHandle(e) {
+      this.more = true;
+      
+    }
   },
-  mounted(){
-      document.onclick=function(){
-              this.more=false;
-      }.bind(this);
+  mounted() {
+    document.onclick = function() {
+      this.more = false;
+    }.bind(this);
   }
 };
 </script>

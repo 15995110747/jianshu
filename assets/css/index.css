@@ -467,48 +467,6 @@ i.fa-qq {
     text-align: center;
     line-height: 40px;
 }
-.note .post .meta-bottom .share .tooltip{
-    position: absolute;
-    top: -37px;
-    left: -12px;
-    background-color: black;
-    color: white;
-    font-size: 13px;
-    padding:5px 10px;
-    border-radius: 4px;
-    text-align: center;
-}
-.note .post .meta-bottom .share .tooltip1{
-    position: absolute;
-    top: -37px;
-    left: 42px;
-    background-color: black;
-    color: white;
-    font-size: 13px;
-    padding:5px 10px;
-    border-radius: 4px;
-    text-align: center;
-}
-.note .post .meta-bottom .share .tooltip2{
-    position: absolute;
-    top: -37px;
-    left: 100px;
-    background-color: black;
-    color: white;
-    font-size: 13px;
-    padding:5px 10px;
-    border-radius: 4px;
-    text-align: center;
-}
-.note .post .meta-bottom .share .tooltip:after,.tooltip1::after,.tooltip2::after{
-    content: '';
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-top: 9px solid black;
-    position: absolute;
-    top: 26px;
-    left: 35px;
-}
 .note .post .meta-bottom .share .popover .share-list{
     width: 157px;
     height: 160px;
@@ -519,24 +477,9 @@ i.fa-qq {
     border: 1px solid #f5f5f5;
     box-shadow: 2px 2px 2px #ddd;
     border-radius: 10px;
-    
 }
-.note .post .meta-bottom .share .popover .share-list li{
-    line-height: 32px;
-    height: 32px;
-    font-size: 16px;
-    padding: 0 7px;
-}
-.note .post .meta-bottom .share .popover .share-list:after{
-    content: '';
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-top: 9px solid white;
-    position: absolute;
-    top: 158px;
-    left: 65px;
 
-}
+
 
 
 
